@@ -82,6 +82,7 @@
 
 
 .alert {
+    padding-top: 10px;
   padding: 10px;
   background-color: #f44336;
   color: white;
@@ -107,7 +108,12 @@
 <body>
     <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <strong>Song is playing in the background!</strong> earbuds laga Le &#128517;
+        <strong>Play this Song and close the message box!</strong> or earbuds laga Le &#128517;
+        <center>
+            <br>
+            <audio controls autoplay>
+                <source src="music2.mp3" type="audio/mp3">
+          </audio></center>
       </div>
     <header>
         <!-- <nav>
@@ -224,10 +230,7 @@
         <img src="img\main-img.png"  width="100%">
         <div class="bottom-right">with all my &#128151; shivang</div>
         </div>
-      <center>
-        <audio controls autoplay>
-            <source src="music2.mp3" type="audio/mp3">
-      </audio></center>
+    
 
     <script>
         let slideIndex = 0;
