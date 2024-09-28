@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>19th Birthday</title>
     <!-- <link rel="icon" type="image/x-icon" href="/img/icon.ico"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/ico" href="img/icon.ico"/>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -77,9 +78,37 @@
   font-size: 10px;
 }
 
+
+
+
+.alert {
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+ 
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
 </style>
 </head>
 <body>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Song is playing in the background!</strong> earbuds laga Le &#128517;
+      </div>
     <header>
         <!-- <nav>
             <div class="container">
@@ -195,10 +224,10 @@
         <img src="img\main-img.png"  width="100%">
         <div class="bottom-right">with all my &#128151; shivang</div>
         </div>
-    
-     
-
-
+      <center>
+        <audio controls autoplay>
+            <source src="music2.mp3" type="audio/mp3">
+      </audio></center>
 
     <script>
         let slideIndex = 0;
