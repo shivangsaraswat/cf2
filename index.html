@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/ico" href="img/icon.ico"/>
     <style>
         body {
     font-family: 'Arial', sans-serif;
@@ -96,6 +97,9 @@ h1 {
     .countdown-item p {
         font-size: 14px;
     }
+    img {
+  border-radius: 50%;
+}
 }
 
 
@@ -103,6 +107,7 @@ h1 {
 </head>
 <body>
     <div class="container">
+        <img src="img/icon.ico" alt="Avatar" style="width:200px">
         <h1>Countdown to Chahat's Birthday</h1>
         <div class="countdown">
             <div class="countdown-item">
@@ -123,11 +128,12 @@ h1 {
             </div>
         </div>
         <br>
-        <h3>You will be automatically redirected to the page once the countdown ends <br>8:34 pm</h3>
+        <h3>You will be automatically redirected to the page once the countdown ends <br>8:00 am <br>why this cuz chahat abhi so rahe hai...! &#128554; &#128546;</h3>
+        <h5>Please be ready with your earbuds and play the song that will appear on the page when the countdown ends</h5>
     </div>
     <script>
     const countdown = () => {
-        const birthdayDate = new Date('Sep 29, 2024 19:50:00').getTime();
+        const birthdayDate = new Date('Sep 29, 2024 08:30:34').getTime();
         const now = new Date().getTime();
         const timeLeft = birthdayDate - now;
     
