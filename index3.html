@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/ico" href="img/icon.ico"/>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffccff, #ff99cc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.countdown-item {
+    font-size: 30px;
+    margin: 0 20px;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 50px;
+    color: #fff;
+}
+
+.countdown-item p {
+    margin: 0;
+    color: #ffccff;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .countdown-item span {
+        font-size: 32px;
+    }
+
+    .countdown-item p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .countdown-item {
+        font-size: 18px;
+        margin: 5px;
+    }
+
+    .countdown-item span {
+        font-size: 28px;
+    }
+
+    .countdown-item p {
+        font-size: 14px;
+    }
+    img {
+  border-radius: 50%;
+}
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img/icon.ico" alt="Avatar" style="width:200px">
+        <h1>Countdown to Chahat's Birthday</h1>
+        <div class="countdown">
+            <div class="countdown-item">
+                <span id="days"></span>
+                <p>Days</p>
+            </div>
+            <div class="countdown-item">
+                <span id="hours"></span>
+                <p>Hours</p>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes"></span>
+                <p>Minutes</p>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds"></span>
+                <p>Seconds</p>
+            </div>
+        </div>
+        <br>
+        <h3>You will be automatically redirected to the page once the countdown ends <br>8:00 am <br>why this cuz chahat abhi so rahe hai...! &#128554; &#128546;</h3>
+        <h5>Please be ready with your earbuds and play the song that will appear on the page when the countdown ends</h5>
+    </div>
+    <script>
+    const countdown = () => {
+        const birthdayDate = new Date('Sep 29, 2024 08:30:34').getTime();
+        const now = new Date().getTime();
+        const timeLeft = birthdayDate - now;
+    
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+        document.getElementById('days').innerHTML = days;
+        document.getElementById('hours').innerHTML = hours;
+        document.getElementById('minutes').innerHTML = minutes;
+        document.getElementById('seconds').innerHTML = seconds;
+    
+        if (timeLeft < 0) {
+            clearInterval(countdownInterval);
+            document.querySelector('.countdown').innerHTML = "<h2>Happy Birthday Chahat!</h2>";
+            
+            // Redirect to the main index page after 3 seconds
+            setTimeout(() => {
+                window.location.href = 'index2.html'; // Change this to the correct path of your main index page
+            }, 1000);
+        }
+    };
+    
+    // Run the countdown every second
+    const countdownInterval = setInterval(countdown, 1000);
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
